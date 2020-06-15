@@ -1,0 +1,4201 @@
+{
+  "contractName": "UsingWitnet",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_wrb",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.8+commit.0bbfe453\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_wrb\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"params\":{\"_wrb\":\"WitnetRequestsBoard address.\"}}},\"title\":\"The UsingWitnet contract\"},\"userdoc\":{\"methods\":{\"constructor\":\"Include an address to specify the WitnetRequestsBoard.\"},\"notice\":\"Contract writers can inherit this contract in order to create requests for the Witnet network.\"}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/witnet-ethereum-bridge/contracts/UsingWitnet.sol\":\"UsingWitnet\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/witnet-ethereum-bridge/contracts/BufferLib.sol\":{\"keccak256\":\"0x620e8602f3e4ce29141f580827204da39d1c4e687e318b913c74a6ad4aa9703d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7809acf5be50352f14b8bccf661ec8abd9c08e36b9196031084703c8baba648d\",\"dweb:/ipfs/QmdRoNNXupbjRmYLK5mW3JVmbs6Ys8NkcprsouihKELR54\"]},\"/Users/sbacha/witnet-ethereum-bridge/contracts/CBOR.sol\":{\"keccak256\":\"0x13ac661cadde28a59f3f8fe21f304d5590de19144b04295dfee28780d879ec66\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://acfd55db5f5adcb16eff73560f2f36b442760b2d32ff75ae62c6aa48c55c9283\",\"dweb:/ipfs/Qmcbpd5qo2UVxkJyVekuS27jrqeP47mKNosNUMACoH3tvS\"]},\"/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol\":{\"keccak256\":\"0x24f1b1cb5938b963da70568d448826bd466e1952f94ebdbe9231c1ebd303faf7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://47852a80fcc70c9f3e943771e9caf7bcb8a91476150661c4a5d9a73cc97d1e2e\",\"dweb:/ipfs/QmPAF49HeGSK2cvKpRcjRACe9Dwz83tdZtqj82DzJDSF85\"]},\"/Users/sbacha/witnet-ethereum-bridge/contracts/UsingWitnet.sol\":{\"keccak256\":\"0xad2ec092333685dfa52007b664c9fd5e49d92df35f89206a1bd6bccd3dc44da1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8f73c3a3c3acf44cd4eae64239dd6bd4a36497835cbbfdda6c67b52d89389d33\",\"dweb:/ipfs/QmUdGxArfUDPrJA7xFRRmoqVsGtdydcCmSK3okPwWb4B5f\"]},\"/Users/sbacha/witnet-ethereum-bridge/contracts/Witnet.sol\":{\"keccak256\":\"0x2fabd4ee213cb5f8216a81f9584353c57153cb3ee350a784ae8998e6e53bb6f1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ee57eaa0b1e75455c0522ded0752defd2554486c22ea68124c30f6aed16cfd3\",\"dweb:/ipfs/QmQYkE2ok4fHeeemcT1o1sNgEUVNTa93nUmmobg83paFrq\"]},\"/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardInterface.sol\":{\"keccak256\":\"0xa8682a060cbad4778d52d909ae8a6977caf2b355869822dfb065a2f4bb79e84e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4019e24c2f586ed1ca0e1595d7481377724428e7340c096e282e5dff87381b8d\",\"dweb:/ipfs/QmVUSdwPqBZYnXRCZdSmBqoP8eXXkNL46CJDDphSD8qwTK\"]},\"/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardProxy.sol\":{\"keccak256\":\"0x8f5fdaf1c4dafad7cf1b0c14e24fde6f1f6e64d66b6e1e7dacc63a897bc2a944\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cefc310c391fe1ff2d575cd87d87a037c7d914b9e8708f8561231521f86daf3e\",\"dweb:/ipfs/QmR41C4d8V69EbKZX3263WutDVCdgDrruHVcw8byMwfHpK\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604051609e380380609e83398181016040526020811015602f57600080fd5b5051600080546001600160a01b039092166001600160a01b0319909216919091179055603f80605f6000396000f3fe6080604052600080fdfea2646970667358221220c025a38fa84c5fa5435743d654b1a31632b2d445c4dec7977db6e548aebc1bce64736f6c63430006080033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220c025a38fa84c5fa5435743d654b1a31632b2d445c4dec7977db6e548aebc1bce64736f6c63430006080033",
+  "immutableReferences": {},
+  "sourceMap": "308:3777:5:-:0;;;532:80;5:9:-1;2:2;;;27:1;24;17:12;2:2;532:80:5;;;;;;;;;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;532:80:5;571:3;:36;;-1:-1:-1;;;;;571:36:5;;;-1:-1:-1;;;;;;571:36:5;;;;;;;;;308:3777;;;;;;",
+  "deployedSourceMap": "308:3777:5:-:0;;;12:1:-1;9;2:12",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.0 <0.7.0;\n\nimport \"./Request.sol\";\nimport \"./Witnet.sol\";\nimport \"./WitnetRequestsBoardProxy.sol\";\n\n\n/**\n * @title The UsingWitnet contract\n * @notice Contract writers can inherit this contract in order to create requests for the\n * Witnet network.\n */\ncontract UsingWitnet {\n  using Witnet for Witnet.Result;\n\n  WitnetRequestsBoardProxy internal wrb;\n\n /**\n  * @notice Include an address to specify the WitnetRequestsBoard.\n  * @param _wrb WitnetRequestsBoard address.\n  */\n  constructor(address _wrb) public {\n    wrb = WitnetRequestsBoardProxy(_wrb);\n  }\n\n  // Provides a convenient way for client contracts extending this to block the execution of the main logic of the\n  // contract until a particular request has been successfully accepted into Witnet\n  modifier witnetRequestAccepted(uint256 _id) {\n    require(witnetCheckRequestAccepted(_id), \"Witnet request is not yet accepted into the Witnet network\");\n    _;\n  }\n\n  // Ensures that user-specified rewards are equal to the total transaction value to prevent users from burning any excess value\n  modifier validRewards(uint256 _requestReward, uint256 _resultReward) {\n    require(_requestReward + _resultReward >= _requestReward, \"The sum of rewards overflows\");\n    require(msg.value == _requestReward + _resultReward, \"Transaction value should equal the sum of rewards\");\n    _;\n  }\n\n  /**\n  * @notice Send a new request to the Witnet network\n  * @dev Call to `post_dr` function in the WitnetRequestsBoard contract\n  * @param _request An instance of the `Request` contract\n  * @param _requestReward Reward specified for the user which posts the request into Witnet\n  * @param _resultReward Reward specified for the user which posts back the request result\n  * @return Sequencial identifier for the request included in the WitnetRequestsBoard\n  */\n  function witnetPostRequest(Request _request, uint256 _requestReward, uint256 _resultReward)\n    internal\n    validRewards(_requestReward, _resultReward)\n  returns (uint256)\n  {\n    return wrb.postDataRequest.value(_requestReward + _resultReward)(_request.bytecode(), _resultReward);\n  }\n\n  /**\n  * @notice Check if a request has been accepted into Witnet.\n  * @dev Contracts depending on Witnet should not start their main business logic (e.g. receiving value from third.\n  * parties) before this method returns `true`.\n  * @param _id The sequential identifier of a request that has been previously sent to the WitnetRequestsBoard.\n  * @return A boolean telling if the request has been already accepted or not. `false` do not mean rejection, though.\n  */\n  function witnetCheckRequestAccepted(uint256 _id) internal view returns (bool) {\n    // Find the request in the\n    uint256 drHash = wrb.readDrHash(_id);\n    // If the hash of the data request transaction in Witnet is not the default, then it means that inclusion of the\n    // request has been proven to the WRB.\n    return drHash != 0;\n  }\n\n  /**\n  * @notice Upgrade the rewards for a Data Request previously included.\n  * @dev Call to `upgrade_dr` function in the WitnetRequestsBoard contract.\n  * @param _id The sequential identifier of a request that has been previously sent to the WitnetRequestsBoard.\n  * @param _requestReward Reward specified for the user which posts the request into Witnet\n  * @param _resultReward Reward specified for the user which post the Data Request result.\n  */\n  function witnetUpgradeRequest(uint256 _id, uint256 _requestReward, uint256 _resultReward)\n    internal\n    validRewards(_requestReward, _resultReward)\n  {\n    wrb.upgradeDataRequest.value(msg.value)(_id, _resultReward);\n  }\n\n  /**\n  * @notice Read the result of a resolved request.\n  * @dev Call to `read_result` function in the WitnetRequestsBoard contract.\n  * @param _id The sequential identifier of a request that was posted to Witnet.\n  * @return The result of the request as an instance of `Result`.\n  */\n  function witnetReadResult(uint256 _id) internal view returns (Witnet.Result memory) {\n    return Witnet.resultFromCborBytes(wrb.readResult(_id));\n  }\n}\n",
+  "sourcePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/UsingWitnet.sol",
+  "ast": {
+    "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/UsingWitnet.sol",
+    "exportedSymbols": {
+      "UsingWitnet": [
+        2276
+      ]
+    },
+    "id": 2277,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2119,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:5"
+      },
+      {
+        "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol",
+        "file": "./Request.sol",
+        "id": 2120,
+        "nodeType": "ImportDirective",
+        "scope": 2277,
+        "sourceUnit": 2118,
+        "src": "66:23:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Witnet.sol",
+        "file": "./Witnet.sol",
+        "id": 2121,
+        "nodeType": "ImportDirective",
+        "scope": 2277,
+        "sourceUnit": 3389,
+        "src": "90:22:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardProxy.sol",
+        "file": "./WitnetRequestsBoardProxy.sol",
+        "id": 2122,
+        "nodeType": "ImportDirective",
+        "scope": 2277,
+        "sourceUnit": 4919,
+        "src": "113:40:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2123,
+          "nodeType": "StructuredDocumentation",
+          "src": "156:151:5",
+          "text": "@title The UsingWitnet contract\n@notice Contract writers can inherit this contract in order to create requests for the\nWitnet network."
+        },
+        "fullyImplemented": true,
+        "id": 2276,
+        "linearizedBaseContracts": [
+          2276
+        ],
+        "name": "UsingWitnet",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 2126,
+            "libraryName": {
+              "contractScope": null,
+              "id": 2124,
+              "name": "Witnet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3388,
+              "src": "339:6:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Witnet_$3388",
+                "typeString": "library Witnet"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "333:31:5",
+            "typeName": {
+              "contractScope": null,
+              "id": 2125,
+              "name": "Witnet.Result",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2289,
+              "src": "350:13:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Result_$2289_storage_ptr",
+                "typeString": "struct Witnet.Result"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 2128,
+            "mutability": "mutable",
+            "name": "wrb",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2276,
+            "src": "368:37:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+              "typeString": "contract WitnetRequestsBoardProxy"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 2127,
+              "name": "WitnetRequestsBoardProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4918,
+              "src": "368:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                "typeString": "contract WitnetRequestsBoardProxy"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2140,
+              "nodeType": "Block",
+              "src": "565:47:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2134,
+                      "name": "wrb",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2128,
+                      "src": "571:3:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                        "typeString": "contract WitnetRequestsBoardProxy"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 2136,
+                          "name": "_wrb",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2131,
+                          "src": "602:4:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 2135,
+                        "name": "WitnetRequestsBoardProxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4918,
+                        "src": "577:24:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_WitnetRequestsBoardProxy_$4918_$",
+                          "typeString": "type(contract WitnetRequestsBoardProxy)"
+                        }
+                      },
+                      "id": 2137,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "577:30:5",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                        "typeString": "contract WitnetRequestsBoardProxy"
+                      }
+                    },
+                    "src": "571:36:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                      "typeString": "contract WitnetRequestsBoardProxy"
+                    }
+                  },
+                  "id": 2139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "571:36:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2129,
+              "nodeType": "StructuredDocumentation",
+              "src": "409:120:5",
+              "text": "@notice Include an address to specify the WitnetRequestsBoard.\n@param _wrb WitnetRequestsBoard address."
+            },
+            "id": 2141,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2131,
+                  "mutability": "mutable",
+                  "name": "_wrb",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2141,
+                  "src": "544:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2130,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "544:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "543:14:5"
+            },
+            "returnParameters": {
+              "id": 2133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "565:0:5"
+            },
+            "scope": 2276,
+            "src": "532:80:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2153,
+              "nodeType": "Block",
+              "src": "859:120:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 2147,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2143,
+                            "src": "900:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 2146,
+                          "name": "witnetCheckRequestAccepted",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2231,
+                          "src": "873:26:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_bool_$",
+                            "typeString": "function (uint256) view returns (bool)"
+                          }
+                        },
+                        "id": 2148,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "873:31:5",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5769746e65742072657175657374206973206e6f742079657420616363657074656420696e746f20746865205769746e6574206e6574776f726b",
+                        "id": 2149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "906:60:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e32351bb3bbeb617c08979a38c7758c1e8cb787b2707c82e72bd7c5274d9cb5b",
+                          "typeString": "literal_string \"Witnet request is not yet accepted into the Witnet network\""
+                        },
+                        "value": "Witnet request is not yet accepted into the Witnet network"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e32351bb3bbeb617c08979a38c7758c1e8cb787b2707c82e72bd7c5274d9cb5b",
+                          "typeString": "literal_string \"Witnet request is not yet accepted into the Witnet network\""
+                        }
+                      ],
+                      "id": 2145,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "865:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "865:102:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2151,
+                  "nodeType": "ExpressionStatement",
+                  "src": "865:102:5"
+                },
+                {
+                  "id": 2152,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "973:1:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2154,
+            "name": "witnetRequestAccepted",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2143,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2154,
+                  "src": "846:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:13:5"
+            },
+            "src": "815:164:5",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2180,
+              "nodeType": "Block",
+              "src": "1181:218:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 2165,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 2163,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 2161,
+                            "name": "_requestReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2156,
+                            "src": "1195:14:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 2162,
+                            "name": "_resultReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2158,
+                            "src": "1212:13:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1195:30:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 2164,
+                          "name": "_requestReward",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2156,
+                          "src": "1229:14:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1195:48:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5468652073756d206f662072657761726473206f766572666c6f7773",
+                        "id": 2166,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1245:30:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c5f253405850bfca6507e5ddfc5fe9867ec409c301127e74b1670b8857ecf084",
+                          "typeString": "literal_string \"The sum of rewards overflows\""
+                        },
+                        "value": "The sum of rewards overflows"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c5f253405850bfca6507e5ddfc5fe9867ec409c301127e74b1670b8857ecf084",
+                          "typeString": "literal_string \"The sum of rewards overflows\""
+                        }
+                      ],
+                      "id": 2160,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1187:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2167,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1187:89:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2168,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1187:89:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 2175,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2170,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1290:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2171,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1290:9:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 2174,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 2172,
+                            "name": "_requestReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2156,
+                            "src": "1303:14:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 2173,
+                            "name": "_resultReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2158,
+                            "src": "1320:13:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1303:30:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1290:43:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5472616e73616374696f6e2076616c75652073686f756c6420657175616c207468652073756d206f662072657761726473",
+                        "id": 2176,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1335:51:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3bec0a4f2e555ca674b9d7c882df2e82973caf16a6978652ff33f2fec4739860",
+                          "typeString": "literal_string \"Transaction value should equal the sum of rewards\""
+                        },
+                        "value": "Transaction value should equal the sum of rewards"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3bec0a4f2e555ca674b9d7c882df2e82973caf16a6978652ff33f2fec4739860",
+                          "typeString": "literal_string \"Transaction value should equal the sum of rewards\""
+                        }
+                      ],
+                      "id": 2169,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1282:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2177,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1282:105:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2178,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1282:105:5"
+                },
+                {
+                  "id": 2179,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1393:1:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2181,
+            "name": "validRewards",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2156,
+                  "mutability": "mutable",
+                  "name": "_requestReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2181,
+                  "src": "1134:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2155,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1134:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2158,
+                  "mutability": "mutable",
+                  "name": "_resultReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2181,
+                  "src": "1158:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2157,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1158:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1133:47:5"
+            },
+            "src": "1112:287:5",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2210,
+              "nodeType": "Block",
+              "src": "2041:111:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2204,
+                            "name": "_request",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2184,
+                            "src": "2112:8:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Request_$2117",
+                              "typeString": "contract Request"
+                            }
+                          },
+                          "id": 2205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "bytecode",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 2094,
+                          "src": "2112:17:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () view external returns (bytes memory)"
+                          }
+                        },
+                        "id": 2206,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2112:19:5",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2207,
+                        "name": "_resultReward",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2188,
+                        "src": "2133:13:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 2202,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 2200,
+                            "name": "_requestReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2186,
+                            "src": "2080:14:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 2201,
+                            "name": "_resultReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2188,
+                            "src": "2097:13:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "2080:30:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2197,
+                            "name": "wrb",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2128,
+                            "src": "2054:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                              "typeString": "contract WitnetRequestsBoardProxy"
+                            }
+                          },
+                          "id": 2198,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "postDataRequest",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4704,
+                          "src": "2054:19:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_payable$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (bytes memory,uint256) payable external returns (uint256)"
+                          }
+                        },
+                        "id": 2199,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2054:25:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_setvalue_pure$_t_uint256_$returns$_t_function_external_payable$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_uint256_$value_$",
+                          "typeString": "function (uint256) pure returns (function (bytes memory,uint256) payable external returns (uint256))"
+                        }
+                      },
+                      "id": 2203,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2054:57:5",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_uint256_$value",
+                        "typeString": "function (bytes memory,uint256) payable external returns (uint256)"
+                      }
+                    },
+                    "id": 2208,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2054:93:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2196,
+                  "id": 2209,
+                  "nodeType": "Return",
+                  "src": "2047:100:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2182,
+              "nodeType": "StructuredDocumentation",
+              "src": "1403:460:5",
+              "text": "@notice Send a new request to the Witnet network\n@dev Call to `post_dr` function in the WitnetRequestsBoard contract\n@param _request An instance of the `Request` contract\n@param _requestReward Reward specified for the user which posts the request into Witnet\n@param _resultReward Reward specified for the user which posts back the request result\n@return Sequencial identifier for the request included in the WitnetRequestsBoard"
+            },
+            "id": 2211,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2191,
+                    "name": "_requestReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2186,
+                    "src": "1988:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2192,
+                    "name": "_resultReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2188,
+                    "src": "2004:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 2193,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2190,
+                  "name": "validRewards",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2181,
+                  "src": "1975:12:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
+                    "typeString": "modifier (uint256,uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1975:43:5"
+              }
+            ],
+            "name": "witnetPostRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2184,
+                  "mutability": "mutable",
+                  "name": "_request",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "1893:16:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Request_$2117",
+                    "typeString": "contract Request"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2183,
+                    "name": "Request",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2117,
+                    "src": "1893:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Request_$2117",
+                      "typeString": "contract Request"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2186,
+                  "mutability": "mutable",
+                  "name": "_requestReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "1911:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2185,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1911:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2188,
+                  "mutability": "mutable",
+                  "name": "_resultReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "1935:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2187,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1935:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1892:65:5"
+            },
+            "returnParameters": {
+              "id": 2196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2195,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "2030:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2194,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2030:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2029:9:5"
+            },
+            "scope": 2276,
+            "src": "1866:286:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2230,
+              "nodeType": "Block",
+              "src": "2701:262:5",
+              "statements": [
+                {
+                  "assignments": [
+                    2220
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2220,
+                      "mutability": "mutable",
+                      "name": "drHash",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2230,
+                      "src": "2738:14:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2219,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2738:7:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2225,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2223,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2214,
+                        "src": "2770:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2221,
+                        "name": "wrb",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2128,
+                        "src": "2755:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                          "typeString": "contract WitnetRequestsBoardProxy"
+                        }
+                      },
+                      "id": 2222,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "readDrHash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4781,
+                      "src": "2755:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) view external returns (uint256)"
+                      }
+                    },
+                    "id": 2224,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2755:19:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2738:36:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2228,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2226,
+                      "name": "drHash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2220,
+                      "src": "2947:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 2227,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2957:1:5",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "2947:11:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2218,
+                  "id": 2229,
+                  "nodeType": "Return",
+                  "src": "2940:18:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2212,
+              "nodeType": "StructuredDocumentation",
+              "src": "2156:464:5",
+              "text": "@notice Check if a request has been accepted into Witnet.\n@dev Contracts depending on Witnet should not start their main business logic (e.g. receiving value from third.\nparties) before this method returns `true`.\n@param _id The sequential identifier of a request that has been previously sent to the WitnetRequestsBoard.\n@return A boolean telling if the request has been already accepted or not. `false` do not mean rejection, though."
+            },
+            "id": 2231,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "witnetCheckRequestAccepted",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2214,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2231,
+                  "src": "2659:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2213,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2659:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2658:13:5"
+            },
+            "returnParameters": {
+              "id": 2218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2217,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2231,
+                  "src": "2695:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2216,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2695:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2694:6:5"
+            },
+            "scope": 2276,
+            "src": "2623:340:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2257,
+              "nodeType": "Block",
+              "src": "3574:70:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2253,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2234,
+                        "src": "3620:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2254,
+                        "name": "_resultReward",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2238,
+                        "src": "3625:13:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2250,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "3609:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2251,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "3609:9:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2245,
+                            "name": "wrb",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2128,
+                            "src": "3580:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                              "typeString": "contract WitnetRequestsBoardProxy"
+                            }
+                          },
+                          "id": 2248,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "upgradeDataRequest",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4738,
+                          "src": "3580:22:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_payable$_t_uint256_$_t_uint256_$returns$__$",
+                            "typeString": "function (uint256,uint256) payable external"
+                          }
+                        },
+                        "id": 2249,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "3580:28:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_setvalue_pure$_t_uint256_$returns$_t_function_external_payable$_t_uint256_$_t_uint256_$returns$__$value_$",
+                          "typeString": "function (uint256) pure returns (function (uint256,uint256) payable external)"
+                        }
+                      },
+                      "id": 2252,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "3580:39:5",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_uint256_$_t_uint256_$returns$__$value",
+                        "typeString": "function (uint256,uint256) payable external"
+                      }
+                    },
+                    "id": 2255,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3580:59:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2256,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3580:59:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2232,
+              "nodeType": "StructuredDocumentation",
+              "src": "2967:451:5",
+              "text": "@notice Upgrade the rewards for a Data Request previously included.\n@dev Call to `upgrade_dr` function in the WitnetRequestsBoard contract.\n@param _id The sequential identifier of a request that has been previously sent to the WitnetRequestsBoard.\n@param _requestReward Reward specified for the user which posts the request into Witnet\n@param _resultReward Reward specified for the user which post the Data Request result."
+            },
+            "id": 2258,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2241,
+                    "name": "_requestReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2236,
+                    "src": "3541:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2242,
+                    "name": "_resultReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2238,
+                    "src": "3557:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 2243,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2240,
+                  "name": "validRewards",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2181,
+                  "src": "3528:12:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
+                    "typeString": "modifier (uint256,uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "3528:43:5"
+              }
+            ],
+            "name": "witnetUpgradeRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2239,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2234,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2258,
+                  "src": "3451:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2233,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3451:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2236,
+                  "mutability": "mutable",
+                  "name": "_requestReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2258,
+                  "src": "3464:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2235,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3464:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2238,
+                  "mutability": "mutable",
+                  "name": "_resultReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2258,
+                  "src": "3488:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2237,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3488:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3450:60:5"
+            },
+            "returnParameters": {
+              "id": 2244,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3574:0:5"
+            },
+            "scope": 2276,
+            "src": "3421:223:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2274,
+              "nodeType": "Block",
+              "src": "4018:65:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 2270,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2261,
+                            "src": "4073:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2268,
+                            "name": "wrb",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2128,
+                            "src": "4058:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                              "typeString": "contract WitnetRequestsBoardProxy"
+                            }
+                          },
+                          "id": 2269,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "readResult",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4820,
+                          "src": "4058:14:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function (uint256) view external returns (bytes memory)"
+                          }
+                        },
+                        "id": 2271,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "4058:19:5",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2266,
+                        "name": "Witnet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3388,
+                        "src": "4031:6:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Witnet_$3388_$",
+                          "typeString": "type(library Witnet)"
+                        }
+                      },
+                      "id": 2267,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "resultFromCborBytes",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2380,
+                      "src": "4031:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_pure$_t_bytes_memory_ptr_$returns$_t_struct$_Result_$2289_memory_ptr_$",
+                        "typeString": "function (bytes memory) pure returns (struct Witnet.Result memory)"
+                      }
+                    },
+                    "id": 2272,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4031:47:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Result_$2289_memory_ptr",
+                      "typeString": "struct Witnet.Result memory"
+                    }
+                  },
+                  "functionReturnParameters": 2265,
+                  "id": 2273,
+                  "nodeType": "Return",
+                  "src": "4024:54:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2259,
+              "nodeType": "StructuredDocumentation",
+              "src": "3648:283:5",
+              "text": "@notice Read the result of a resolved request.\n@dev Call to `read_result` function in the WitnetRequestsBoard contract.\n@param _id The sequential identifier of a request that was posted to Witnet.\n@return The result of the request as an instance of `Result`."
+            },
+            "id": 2275,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "witnetReadResult",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2261,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2275,
+                  "src": "3960:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2260,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3960:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3959:13:5"
+            },
+            "returnParameters": {
+              "id": 2265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2264,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2275,
+                  "src": "3996:20:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Result_$2289_memory_ptr",
+                    "typeString": "struct Witnet.Result"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2263,
+                    "name": "Witnet.Result",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2289,
+                    "src": "3996:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Result_$2289_storage_ptr",
+                      "typeString": "struct Witnet.Result"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3995:22:5"
+            },
+            "scope": 2276,
+            "src": "3934:149:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2277,
+        "src": "308:3777:5"
+      }
+    ],
+    "src": "33:4053:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/UsingWitnet.sol",
+    "exportedSymbols": {
+      "UsingWitnet": [
+        2276
+      ]
+    },
+    "id": 2277,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2119,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:5"
+      },
+      {
+        "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol",
+        "file": "./Request.sol",
+        "id": 2120,
+        "nodeType": "ImportDirective",
+        "scope": 2277,
+        "sourceUnit": 2118,
+        "src": "66:23:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Witnet.sol",
+        "file": "./Witnet.sol",
+        "id": 2121,
+        "nodeType": "ImportDirective",
+        "scope": 2277,
+        "sourceUnit": 3389,
+        "src": "90:22:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardProxy.sol",
+        "file": "./WitnetRequestsBoardProxy.sol",
+        "id": 2122,
+        "nodeType": "ImportDirective",
+        "scope": 2277,
+        "sourceUnit": 4919,
+        "src": "113:40:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2123,
+          "nodeType": "StructuredDocumentation",
+          "src": "156:151:5",
+          "text": "@title The UsingWitnet contract\n@notice Contract writers can inherit this contract in order to create requests for the\nWitnet network."
+        },
+        "fullyImplemented": true,
+        "id": 2276,
+        "linearizedBaseContracts": [
+          2276
+        ],
+        "name": "UsingWitnet",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 2126,
+            "libraryName": {
+              "contractScope": null,
+              "id": 2124,
+              "name": "Witnet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3388,
+              "src": "339:6:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Witnet_$3388",
+                "typeString": "library Witnet"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "333:31:5",
+            "typeName": {
+              "contractScope": null,
+              "id": 2125,
+              "name": "Witnet.Result",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2289,
+              "src": "350:13:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Result_$2289_storage_ptr",
+                "typeString": "struct Witnet.Result"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 2128,
+            "mutability": "mutable",
+            "name": "wrb",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2276,
+            "src": "368:37:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+              "typeString": "contract WitnetRequestsBoardProxy"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 2127,
+              "name": "WitnetRequestsBoardProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4918,
+              "src": "368:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                "typeString": "contract WitnetRequestsBoardProxy"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2140,
+              "nodeType": "Block",
+              "src": "565:47:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2134,
+                      "name": "wrb",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2128,
+                      "src": "571:3:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                        "typeString": "contract WitnetRequestsBoardProxy"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 2136,
+                          "name": "_wrb",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2131,
+                          "src": "602:4:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 2135,
+                        "name": "WitnetRequestsBoardProxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4918,
+                        "src": "577:24:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_WitnetRequestsBoardProxy_$4918_$",
+                          "typeString": "type(contract WitnetRequestsBoardProxy)"
+                        }
+                      },
+                      "id": 2137,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "577:30:5",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                        "typeString": "contract WitnetRequestsBoardProxy"
+                      }
+                    },
+                    "src": "571:36:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                      "typeString": "contract WitnetRequestsBoardProxy"
+                    }
+                  },
+                  "id": 2139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "571:36:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2129,
+              "nodeType": "StructuredDocumentation",
+              "src": "409:120:5",
+              "text": "@notice Include an address to specify the WitnetRequestsBoard.\n@param _wrb WitnetRequestsBoard address."
+            },
+            "id": 2141,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2131,
+                  "mutability": "mutable",
+                  "name": "_wrb",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2141,
+                  "src": "544:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2130,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "544:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "543:14:5"
+            },
+            "returnParameters": {
+              "id": 2133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "565:0:5"
+            },
+            "scope": 2276,
+            "src": "532:80:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2153,
+              "nodeType": "Block",
+              "src": "859:120:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 2147,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2143,
+                            "src": "900:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 2146,
+                          "name": "witnetCheckRequestAccepted",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2231,
+                          "src": "873:26:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_bool_$",
+                            "typeString": "function (uint256) view returns (bool)"
+                          }
+                        },
+                        "id": 2148,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "873:31:5",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5769746e65742072657175657374206973206e6f742079657420616363657074656420696e746f20746865205769746e6574206e6574776f726b",
+                        "id": 2149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "906:60:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e32351bb3bbeb617c08979a38c7758c1e8cb787b2707c82e72bd7c5274d9cb5b",
+                          "typeString": "literal_string \"Witnet request is not yet accepted into the Witnet network\""
+                        },
+                        "value": "Witnet request is not yet accepted into the Witnet network"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e32351bb3bbeb617c08979a38c7758c1e8cb787b2707c82e72bd7c5274d9cb5b",
+                          "typeString": "literal_string \"Witnet request is not yet accepted into the Witnet network\""
+                        }
+                      ],
+                      "id": 2145,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "865:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "865:102:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2151,
+                  "nodeType": "ExpressionStatement",
+                  "src": "865:102:5"
+                },
+                {
+                  "id": 2152,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "973:1:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2154,
+            "name": "witnetRequestAccepted",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2143,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2154,
+                  "src": "846:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:13:5"
+            },
+            "src": "815:164:5",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2180,
+              "nodeType": "Block",
+              "src": "1181:218:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 2165,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 2163,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 2161,
+                            "name": "_requestReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2156,
+                            "src": "1195:14:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 2162,
+                            "name": "_resultReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2158,
+                            "src": "1212:13:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1195:30:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 2164,
+                          "name": "_requestReward",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2156,
+                          "src": "1229:14:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1195:48:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5468652073756d206f662072657761726473206f766572666c6f7773",
+                        "id": 2166,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1245:30:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c5f253405850bfca6507e5ddfc5fe9867ec409c301127e74b1670b8857ecf084",
+                          "typeString": "literal_string \"The sum of rewards overflows\""
+                        },
+                        "value": "The sum of rewards overflows"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c5f253405850bfca6507e5ddfc5fe9867ec409c301127e74b1670b8857ecf084",
+                          "typeString": "literal_string \"The sum of rewards overflows\""
+                        }
+                      ],
+                      "id": 2160,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1187:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2167,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1187:89:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2168,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1187:89:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 2175,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2170,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1290:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2171,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1290:9:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 2174,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 2172,
+                            "name": "_requestReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2156,
+                            "src": "1303:14:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 2173,
+                            "name": "_resultReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2158,
+                            "src": "1320:13:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1303:30:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1290:43:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5472616e73616374696f6e2076616c75652073686f756c6420657175616c207468652073756d206f662072657761726473",
+                        "id": 2176,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1335:51:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3bec0a4f2e555ca674b9d7c882df2e82973caf16a6978652ff33f2fec4739860",
+                          "typeString": "literal_string \"Transaction value should equal the sum of rewards\""
+                        },
+                        "value": "Transaction value should equal the sum of rewards"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3bec0a4f2e555ca674b9d7c882df2e82973caf16a6978652ff33f2fec4739860",
+                          "typeString": "literal_string \"Transaction value should equal the sum of rewards\""
+                        }
+                      ],
+                      "id": 2169,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1282:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2177,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1282:105:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2178,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1282:105:5"
+                },
+                {
+                  "id": 2179,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1393:1:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2181,
+            "name": "validRewards",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2156,
+                  "mutability": "mutable",
+                  "name": "_requestReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2181,
+                  "src": "1134:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2155,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1134:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2158,
+                  "mutability": "mutable",
+                  "name": "_resultReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2181,
+                  "src": "1158:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2157,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1158:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1133:47:5"
+            },
+            "src": "1112:287:5",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2210,
+              "nodeType": "Block",
+              "src": "2041:111:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2204,
+                            "name": "_request",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2184,
+                            "src": "2112:8:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Request_$2117",
+                              "typeString": "contract Request"
+                            }
+                          },
+                          "id": 2205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "bytecode",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 2094,
+                          "src": "2112:17:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () view external returns (bytes memory)"
+                          }
+                        },
+                        "id": 2206,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2112:19:5",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2207,
+                        "name": "_resultReward",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2188,
+                        "src": "2133:13:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 2202,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 2200,
+                            "name": "_requestReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2186,
+                            "src": "2080:14:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 2201,
+                            "name": "_resultReward",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2188,
+                            "src": "2097:13:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "2080:30:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2197,
+                            "name": "wrb",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2128,
+                            "src": "2054:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                              "typeString": "contract WitnetRequestsBoardProxy"
+                            }
+                          },
+                          "id": 2198,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "postDataRequest",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4704,
+                          "src": "2054:19:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_payable$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (bytes memory,uint256) payable external returns (uint256)"
+                          }
+                        },
+                        "id": 2199,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2054:25:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_setvalue_pure$_t_uint256_$returns$_t_function_external_payable$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_uint256_$value_$",
+                          "typeString": "function (uint256) pure returns (function (bytes memory,uint256) payable external returns (uint256))"
+                        }
+                      },
+                      "id": 2203,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2054:57:5",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_uint256_$value",
+                        "typeString": "function (bytes memory,uint256) payable external returns (uint256)"
+                      }
+                    },
+                    "id": 2208,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2054:93:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2196,
+                  "id": 2209,
+                  "nodeType": "Return",
+                  "src": "2047:100:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2182,
+              "nodeType": "StructuredDocumentation",
+              "src": "1403:460:5",
+              "text": "@notice Send a new request to the Witnet network\n@dev Call to `post_dr` function in the WitnetRequestsBoard contract\n@param _request An instance of the `Request` contract\n@param _requestReward Reward specified for the user which posts the request into Witnet\n@param _resultReward Reward specified for the user which posts back the request result\n@return Sequencial identifier for the request included in the WitnetRequestsBoard"
+            },
+            "id": 2211,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2191,
+                    "name": "_requestReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2186,
+                    "src": "1988:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2192,
+                    "name": "_resultReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2188,
+                    "src": "2004:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 2193,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2190,
+                  "name": "validRewards",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2181,
+                  "src": "1975:12:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
+                    "typeString": "modifier (uint256,uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1975:43:5"
+              }
+            ],
+            "name": "witnetPostRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2184,
+                  "mutability": "mutable",
+                  "name": "_request",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "1893:16:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Request_$2117",
+                    "typeString": "contract Request"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2183,
+                    "name": "Request",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2117,
+                    "src": "1893:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Request_$2117",
+                      "typeString": "contract Request"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2186,
+                  "mutability": "mutable",
+                  "name": "_requestReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "1911:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2185,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1911:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2188,
+                  "mutability": "mutable",
+                  "name": "_resultReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "1935:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2187,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1935:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1892:65:5"
+            },
+            "returnParameters": {
+              "id": 2196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2195,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2211,
+                  "src": "2030:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2194,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2030:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2029:9:5"
+            },
+            "scope": 2276,
+            "src": "1866:286:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2230,
+              "nodeType": "Block",
+              "src": "2701:262:5",
+              "statements": [
+                {
+                  "assignments": [
+                    2220
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2220,
+                      "mutability": "mutable",
+                      "name": "drHash",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2230,
+                      "src": "2738:14:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2219,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2738:7:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2225,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2223,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2214,
+                        "src": "2770:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2221,
+                        "name": "wrb",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2128,
+                        "src": "2755:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                          "typeString": "contract WitnetRequestsBoardProxy"
+                        }
+                      },
+                      "id": 2222,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "readDrHash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4781,
+                      "src": "2755:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) view external returns (uint256)"
+                      }
+                    },
+                    "id": 2224,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2755:19:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2738:36:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2228,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2226,
+                      "name": "drHash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2220,
+                      "src": "2947:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 2227,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2957:1:5",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "2947:11:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2218,
+                  "id": 2229,
+                  "nodeType": "Return",
+                  "src": "2940:18:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2212,
+              "nodeType": "StructuredDocumentation",
+              "src": "2156:464:5",
+              "text": "@notice Check if a request has been accepted into Witnet.\n@dev Contracts depending on Witnet should not start their main business logic (e.g. receiving value from third.\nparties) before this method returns `true`.\n@param _id The sequential identifier of a request that has been previously sent to the WitnetRequestsBoard.\n@return A boolean telling if the request has been already accepted or not. `false` do not mean rejection, though."
+            },
+            "id": 2231,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "witnetCheckRequestAccepted",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2214,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2231,
+                  "src": "2659:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2213,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2659:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2658:13:5"
+            },
+            "returnParameters": {
+              "id": 2218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2217,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2231,
+                  "src": "2695:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2216,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2695:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2694:6:5"
+            },
+            "scope": 2276,
+            "src": "2623:340:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2257,
+              "nodeType": "Block",
+              "src": "3574:70:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2253,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2234,
+                        "src": "3620:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2254,
+                        "name": "_resultReward",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2238,
+                        "src": "3625:13:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2250,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "3609:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2251,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "3609:9:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2245,
+                            "name": "wrb",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2128,
+                            "src": "3580:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                              "typeString": "contract WitnetRequestsBoardProxy"
+                            }
+                          },
+                          "id": 2248,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "upgradeDataRequest",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4738,
+                          "src": "3580:22:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_payable$_t_uint256_$_t_uint256_$returns$__$",
+                            "typeString": "function (uint256,uint256) payable external"
+                          }
+                        },
+                        "id": 2249,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "3580:28:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_setvalue_pure$_t_uint256_$returns$_t_function_external_payable$_t_uint256_$_t_uint256_$returns$__$value_$",
+                          "typeString": "function (uint256) pure returns (function (uint256,uint256) payable external)"
+                        }
+                      },
+                      "id": 2252,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "3580:39:5",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_uint256_$_t_uint256_$returns$__$value",
+                        "typeString": "function (uint256,uint256) payable external"
+                      }
+                    },
+                    "id": 2255,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3580:59:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2256,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3580:59:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2232,
+              "nodeType": "StructuredDocumentation",
+              "src": "2967:451:5",
+              "text": "@notice Upgrade the rewards for a Data Request previously included.\n@dev Call to `upgrade_dr` function in the WitnetRequestsBoard contract.\n@param _id The sequential identifier of a request that has been previously sent to the WitnetRequestsBoard.\n@param _requestReward Reward specified for the user which posts the request into Witnet\n@param _resultReward Reward specified for the user which post the Data Request result."
+            },
+            "id": 2258,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2241,
+                    "name": "_requestReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2236,
+                    "src": "3541:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2242,
+                    "name": "_resultReward",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2238,
+                    "src": "3557:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 2243,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2240,
+                  "name": "validRewards",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2181,
+                  "src": "3528:12:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
+                    "typeString": "modifier (uint256,uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "3528:43:5"
+              }
+            ],
+            "name": "witnetUpgradeRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2239,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2234,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2258,
+                  "src": "3451:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2233,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3451:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2236,
+                  "mutability": "mutable",
+                  "name": "_requestReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2258,
+                  "src": "3464:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2235,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3464:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2238,
+                  "mutability": "mutable",
+                  "name": "_resultReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2258,
+                  "src": "3488:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2237,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3488:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3450:60:5"
+            },
+            "returnParameters": {
+              "id": 2244,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3574:0:5"
+            },
+            "scope": 2276,
+            "src": "3421:223:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2274,
+              "nodeType": "Block",
+              "src": "4018:65:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 2270,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2261,
+                            "src": "4073:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2268,
+                            "name": "wrb",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2128,
+                            "src": "4058:3:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_WitnetRequestsBoardProxy_$4918",
+                              "typeString": "contract WitnetRequestsBoardProxy"
+                            }
+                          },
+                          "id": 2269,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "readResult",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4820,
+                          "src": "4058:14:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function (uint256) view external returns (bytes memory)"
+                          }
+                        },
+                        "id": 2271,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "4058:19:5",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2266,
+                        "name": "Witnet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3388,
+                        "src": "4031:6:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Witnet_$3388_$",
+                          "typeString": "type(library Witnet)"
+                        }
+                      },
+                      "id": 2267,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "resultFromCborBytes",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2380,
+                      "src": "4031:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_pure$_t_bytes_memory_ptr_$returns$_t_struct$_Result_$2289_memory_ptr_$",
+                        "typeString": "function (bytes memory) pure returns (struct Witnet.Result memory)"
+                      }
+                    },
+                    "id": 2272,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4031:47:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Result_$2289_memory_ptr",
+                      "typeString": "struct Witnet.Result memory"
+                    }
+                  },
+                  "functionReturnParameters": 2265,
+                  "id": 2273,
+                  "nodeType": "Return",
+                  "src": "4024:54:5"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2259,
+              "nodeType": "StructuredDocumentation",
+              "src": "3648:283:5",
+              "text": "@notice Read the result of a resolved request.\n@dev Call to `read_result` function in the WitnetRequestsBoard contract.\n@param _id The sequential identifier of a request that was posted to Witnet.\n@return The result of the request as an instance of `Result`."
+            },
+            "id": 2275,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "witnetReadResult",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2261,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2275,
+                  "src": "3960:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2260,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3960:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3959:13:5"
+            },
+            "returnParameters": {
+              "id": 2265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2264,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2275,
+                  "src": "3996:20:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Result_$2289_memory_ptr",
+                    "typeString": "struct Witnet.Result"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2263,
+                    "name": "Witnet.Result",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2289,
+                    "src": "3996:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Result_$2289_storage_ptr",
+                      "typeString": "struct Witnet.Result"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3995:22:5"
+            },
+            "scope": 2276,
+            "src": "3934:149:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2277,
+        "src": "308:3777:5"
+      }
+    ],
+    "src": "33:4053:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.8+commit.0bbfe453.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-12T08:08:15.481Z",
+  "devdoc": {
+    "methods": {
+      "constructor": {
+        "params": {
+          "_wrb": "WitnetRequestsBoard address."
+        }
+      }
+    },
+    "title": "The UsingWitnet contract"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Include an address to specify the WitnetRequestsBoard."
+    },
+    "notice": "Contract writers can inherit this contract in order to create requests for the Witnet network."
+  }
+}

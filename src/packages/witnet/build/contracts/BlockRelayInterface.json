@@ -1,0 +1,1627 @@
+{
+  "contractName": "BlockRelayInterface",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getLastBeacon",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLastEpoch",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLastHash",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "_poi",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_blockHash",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_element",
+          "type": "uint256"
+        }
+      ],
+      "name": "verifyDrPoi",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "_poi",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_blockHash",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_element",
+          "type": "uint256"
+        }
+      ],
+      "name": "verifyTallyPoi",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "isUpgradable",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.8+commit.0bbfe453\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getLastBeacon\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLastEpoch\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLastHash\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"isUpgradable\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"_poi\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"_blockHash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_element\",\"type\":\"uint256\"}],\"name\":\"verifyDrPoi\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"_poi\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"_blockHash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_element\",\"type\":\"uint256\"}],\"name\":\"verifyTallyPoi\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Witnet Foundation\",\"methods\":{\"getLastBeacon()\":{\"returns\":{\"_0\":\"last beacon in bytes\"}},\"getLastEpoch()\":{\"returns\":{\"_0\":\"epoch\"}},\"getLastHash()\":{\"returns\":{\"_0\":\"blockhash\"}},\"isUpgradable(address)\":{\"returns\":{\"_0\":\"true if contract is upgradable\"}},\"verifyDrPoi(uint256[],uint256,uint256,uint256)\":{\"params\":{\"_blockHash\":\"the blockHash\",\"_element\":\"the leaf to be verified\",\"_index\":\"the index in the merkle tree of the element to verify\",\"_poi\":\"the proof of inclusion as [sibling1, sibling2,..]\"},\"returns\":{\"_0\":\"true if valid data request PoI\"}},\"verifyTallyPoi(uint256[],uint256,uint256,uint256)\":{\"params\":{\"_blockHash\":\"the blockHash\",\"_element\":\"the leaf to be verified\",\"_index\":\"the index in the merkle tree of the element to verify\",\"_poi\":\"the proof of inclusion as [sibling1, sibling2,..]\"},\"returns\":{\"_0\":\"true if valid tally PoI\"}}},\"title\":\"Block Relay Interface\"},\"userdoc\":{\"methods\":{\"getLastBeacon()\":{\"notice\":\"Returns the beacon from the last inserted block. The last beacon (in bytes) will be used by Witnet Bridge nodes to compute their eligibility.\"},\"getLastEpoch()\":{\"notice\":\"Returns the lastest epoch reported to the block relay.\"},\"getLastHash()\":{\"notice\":\"Returns the latest hash reported to the block relay\"},\"isUpgradable(address)\":{\"notice\":\"Verifies if the block relay can be upgraded\"},\"verifyDrPoi(uint256[],uint256,uint256,uint256)\":{\"notice\":\"Verifies the validity of a data request PoI against the DR merkle root\"},\"verifyTallyPoi(uint256[],uint256,uint256,uint256)\":{\"notice\":\"Verifies the validity of a tally PoI against the Tally merkle root\"}},\"notice\":\"Interface of a Block Relay to a Witnet network It defines how to interact with the Block Relay in order to support: - Retrieve last beacon information - Verify proof of inclusions (PoIs) of data request and tally transactions\"}},\"settings\":{\"compilationTarget\":{\"witnet-ethereum-block-relay/contracts/BlockRelayInterface.sol\":\"BlockRelayInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"witnet-ethereum-block-relay/contracts/BlockRelayInterface.sol\":{\"keccak256\":\"0xd5a9deddadcdeda31e7df80590b71f9e26bb0eec4277b2f890e94ff7d00df4a2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d5df54dd2f2f4e603e45fa15f4f5bbc9571212fcc78daf4fcb4fc26eeddff1f7\",\"dweb:/ipfs/QmYe86CJhsYwPfkazjcRj2vTPdjAzu7r2LknQoCzhn5BBJ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.0 <0.7.0;\n\n\n/**\n * @title Block Relay Interface\n * @notice Interface of a Block Relay to a Witnet network\n * It defines how to interact with the Block Relay in order to support:\n *  - Retrieve last beacon information\n *  - Verify proof of inclusions (PoIs) of data request and tally transactions\n * @author Witnet Foundation\n */\ninterface BlockRelayInterface {\n\n  /// @notice Returns the beacon from the last inserted block.\n  /// The last beacon (in bytes) will be used by Witnet Bridge nodes to compute their eligibility.\n  /// @return last beacon in bytes\n  function getLastBeacon() external view returns(bytes memory);\n\n  /// @notice Returns the lastest epoch reported to the block relay.\n  /// @return epoch\n  function getLastEpoch() external view returns(uint256);\n\n  /// @notice Returns the latest hash reported to the block relay\n  /// @return blockhash\n  function getLastHash() external view returns(uint256);\n\n  /// @notice Verifies the validity of a data request PoI against the DR merkle root\n  /// @param _poi the proof of inclusion as [sibling1, sibling2,..]\n  /// @param _blockHash the blockHash\n  /// @param _index the index in the merkle tree of the element to verify\n  /// @param _element the leaf to be verified\n  /// @return true if valid data request PoI\n  function verifyDrPoi(\n    uint256[] calldata _poi,\n    uint256 _blockHash,\n    uint256 _index,\n    uint256 _element) external view returns(bool);\n\n  /// @notice Verifies the validity of a tally PoI against the Tally merkle root\n  /// @param _poi the proof of inclusion as [sibling1, sibling2,..]\n  /// @param _blockHash the blockHash\n  /// @param _index the index in the merkle tree of the element to verify\n  /// @param _element the leaf to be verified\n  /// @return true if valid tally PoI\n  function verifyTallyPoi(\n    uint256[] calldata _poi,\n    uint256 _blockHash,\n    uint256 _index,\n    uint256 _element) external view returns(bool);\n\n  /// @notice Verifies if the block relay can be upgraded\n  /// @return true if contract is upgradable\n  function isUpgradable(address _address) external view returns(bool);\n\n}",
+  "sourcePath": "witnet-ethereum-block-relay/contracts/BlockRelayInterface.sol",
+  "ast": {
+    "absolutePath": "witnet-ethereum-block-relay/contracts/BlockRelayInterface.sol",
+    "exportedSymbols": {
+      "BlockRelayInterface": [
+        7928
+      ]
+    },
+    "id": 7929,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7870,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 7871,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:316:15",
+          "text": "@title Block Relay Interface\n@notice Interface of a Block Relay to a Witnet network\nIt defines how to interact with the Block Relay in order to support:\n - Retrieve last beacon information\n - Verify proof of inclusions (PoIs) of data request and tally transactions\n@author Witnet Foundation"
+        },
+        "fullyImplemented": false,
+        "id": 7928,
+        "linearizedBaseContracts": [
+          7928
+        ],
+        "name": "BlockRelayInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 7872,
+              "nodeType": "StructuredDocumentation",
+              "src": "419:194:15",
+              "text": "@notice Returns the beacon from the last inserted block.\n The last beacon (in bytes) will be used by Witnet Bridge nodes to compute their eligibility.\n @return last beacon in bytes"
+            },
+            "functionSelector": "e987ed58",
+            "id": 7877,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLastBeacon",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7873,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "638:2:15"
+            },
+            "returnParameters": {
+              "id": 7876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7875,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7877,
+                  "src": "663:12:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 7874,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:5:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:14:15"
+            },
+            "scope": 7928,
+            "src": "616:61:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7878,
+              "nodeType": "StructuredDocumentation",
+              "src": "681:86:15",
+              "text": "@notice Returns the lastest epoch reported to the block relay.\n @return epoch"
+            },
+            "functionSelector": "398bac63",
+            "id": 7883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLastEpoch",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7879,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "791:2:15"
+            },
+            "returnParameters": {
+              "id": 7882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7881,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7883,
+                  "src": "816:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7880,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "816:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "815:9:15"
+            },
+            "scope": 7928,
+            "src": "770:55:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7884,
+              "nodeType": "StructuredDocumentation",
+              "src": "829:87:15",
+              "text": "@notice Returns the latest hash reported to the block relay\n @return blockhash"
+            },
+            "functionSelector": "4a910046",
+            "id": 7889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLastHash",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "939:2:15"
+            },
+            "returnParameters": {
+              "id": 7888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7887,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7889,
+                  "src": "964:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7886,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "964:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "963:9:15"
+            },
+            "scope": 7928,
+            "src": "919:54:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7890,
+              "nodeType": "StructuredDocumentation",
+              "src": "977:353:15",
+              "text": "@notice Verifies the validity of a data request PoI against the DR merkle root\n @param _poi the proof of inclusion as [sibling1, sibling2,..]\n @param _blockHash the blockHash\n @param _index the index in the merkle tree of the element to verify\n @param _element the leaf to be verified\n @return true if valid data request PoI"
+            },
+            "functionSelector": "1b58f9c7",
+            "id": 7904,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyDrPoi",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7900,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7893,
+                  "mutability": "mutable",
+                  "name": "_poi",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1359:23:15",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7891,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1359:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7892,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1359:9:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7895,
+                  "mutability": "mutable",
+                  "name": "_blockHash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1388:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7894,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1388:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7897,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1412:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1412:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7899,
+                  "mutability": "mutable",
+                  "name": "_element",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1432:16:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1432:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1353:96:15"
+            },
+            "returnParameters": {
+              "id": 7903,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7902,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1472:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7901,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1472:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1471:6:15"
+            },
+            "scope": 7928,
+            "src": "1333:145:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7905,
+              "nodeType": "StructuredDocumentation",
+              "src": "1482:342:15",
+              "text": "@notice Verifies the validity of a tally PoI against the Tally merkle root\n @param _poi the proof of inclusion as [sibling1, sibling2,..]\n @param _blockHash the blockHash\n @param _index the index in the merkle tree of the element to verify\n @param _element the leaf to be verified\n @return true if valid tally PoI"
+            },
+            "functionSelector": "9806e62b",
+            "id": 7919,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyTallyPoi",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7915,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7908,
+                  "mutability": "mutable",
+                  "name": "_poi",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1856:23:15",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7906,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1856:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7907,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1856:9:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7910,
+                  "mutability": "mutable",
+                  "name": "_blockHash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1885:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7909,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1885:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7912,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1909:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1909:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7914,
+                  "mutability": "mutable",
+                  "name": "_element",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1929:16:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7913,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1929:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1850:96:15"
+            },
+            "returnParameters": {
+              "id": 7918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7917,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1969:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7916,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1969:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1968:6:15"
+            },
+            "scope": 7928,
+            "src": "1827:148:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7920,
+              "nodeType": "StructuredDocumentation",
+              "src": "1979:100:15",
+              "text": "@notice Verifies if the block relay can be upgraded\n @return true if contract is upgradable"
+            },
+            "functionSelector": "be2adb35",
+            "id": 7927,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isUpgradable",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7923,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7922,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7927,
+                  "src": "2104:16:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7921,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2104:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2103:18:15"
+            },
+            "returnParameters": {
+              "id": 7926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7925,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7927,
+                  "src": "2144:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7924,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2144:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2143:6:15"
+            },
+            "scope": 7928,
+            "src": "2082:68:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7929,
+        "src": "384:1769:15"
+      }
+    ],
+    "src": "33:2120:15"
+  },
+  "legacyAST": {
+    "absolutePath": "witnet-ethereum-block-relay/contracts/BlockRelayInterface.sol",
+    "exportedSymbols": {
+      "BlockRelayInterface": [
+        7928
+      ]
+    },
+    "id": 7929,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7870,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 7871,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:316:15",
+          "text": "@title Block Relay Interface\n@notice Interface of a Block Relay to a Witnet network\nIt defines how to interact with the Block Relay in order to support:\n - Retrieve last beacon information\n - Verify proof of inclusions (PoIs) of data request and tally transactions\n@author Witnet Foundation"
+        },
+        "fullyImplemented": false,
+        "id": 7928,
+        "linearizedBaseContracts": [
+          7928
+        ],
+        "name": "BlockRelayInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 7872,
+              "nodeType": "StructuredDocumentation",
+              "src": "419:194:15",
+              "text": "@notice Returns the beacon from the last inserted block.\n The last beacon (in bytes) will be used by Witnet Bridge nodes to compute their eligibility.\n @return last beacon in bytes"
+            },
+            "functionSelector": "e987ed58",
+            "id": 7877,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLastBeacon",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7873,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "638:2:15"
+            },
+            "returnParameters": {
+              "id": 7876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7875,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7877,
+                  "src": "663:12:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 7874,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:5:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:14:15"
+            },
+            "scope": 7928,
+            "src": "616:61:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7878,
+              "nodeType": "StructuredDocumentation",
+              "src": "681:86:15",
+              "text": "@notice Returns the lastest epoch reported to the block relay.\n @return epoch"
+            },
+            "functionSelector": "398bac63",
+            "id": 7883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLastEpoch",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7879,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "791:2:15"
+            },
+            "returnParameters": {
+              "id": 7882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7881,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7883,
+                  "src": "816:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7880,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "816:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "815:9:15"
+            },
+            "scope": 7928,
+            "src": "770:55:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7884,
+              "nodeType": "StructuredDocumentation",
+              "src": "829:87:15",
+              "text": "@notice Returns the latest hash reported to the block relay\n @return blockhash"
+            },
+            "functionSelector": "4a910046",
+            "id": 7889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLastHash",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "939:2:15"
+            },
+            "returnParameters": {
+              "id": 7888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7887,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7889,
+                  "src": "964:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7886,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "964:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "963:9:15"
+            },
+            "scope": 7928,
+            "src": "919:54:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7890,
+              "nodeType": "StructuredDocumentation",
+              "src": "977:353:15",
+              "text": "@notice Verifies the validity of a data request PoI against the DR merkle root\n @param _poi the proof of inclusion as [sibling1, sibling2,..]\n @param _blockHash the blockHash\n @param _index the index in the merkle tree of the element to verify\n @param _element the leaf to be verified\n @return true if valid data request PoI"
+            },
+            "functionSelector": "1b58f9c7",
+            "id": 7904,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyDrPoi",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7900,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7893,
+                  "mutability": "mutable",
+                  "name": "_poi",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1359:23:15",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7891,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1359:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7892,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1359:9:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7895,
+                  "mutability": "mutable",
+                  "name": "_blockHash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1388:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7894,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1388:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7897,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1412:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1412:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7899,
+                  "mutability": "mutable",
+                  "name": "_element",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1432:16:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1432:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1353:96:15"
+            },
+            "returnParameters": {
+              "id": 7903,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7902,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7904,
+                  "src": "1472:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7901,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1472:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1471:6:15"
+            },
+            "scope": 7928,
+            "src": "1333:145:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7905,
+              "nodeType": "StructuredDocumentation",
+              "src": "1482:342:15",
+              "text": "@notice Verifies the validity of a tally PoI against the Tally merkle root\n @param _poi the proof of inclusion as [sibling1, sibling2,..]\n @param _blockHash the blockHash\n @param _index the index in the merkle tree of the element to verify\n @param _element the leaf to be verified\n @return true if valid tally PoI"
+            },
+            "functionSelector": "9806e62b",
+            "id": 7919,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyTallyPoi",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7915,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7908,
+                  "mutability": "mutable",
+                  "name": "_poi",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1856:23:15",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7906,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1856:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7907,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1856:9:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7910,
+                  "mutability": "mutable",
+                  "name": "_blockHash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1885:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7909,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1885:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7912,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1909:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1909:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7914,
+                  "mutability": "mutable",
+                  "name": "_element",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1929:16:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7913,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1929:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1850:96:15"
+            },
+            "returnParameters": {
+              "id": 7918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7917,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7919,
+                  "src": "1969:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7916,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1969:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1968:6:15"
+            },
+            "scope": 7928,
+            "src": "1827:148:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 7920,
+              "nodeType": "StructuredDocumentation",
+              "src": "1979:100:15",
+              "text": "@notice Verifies if the block relay can be upgraded\n @return true if contract is upgradable"
+            },
+            "functionSelector": "be2adb35",
+            "id": 7927,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isUpgradable",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7923,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7922,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7927,
+                  "src": "2104:16:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7921,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2104:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2103:18:15"
+            },
+            "returnParameters": {
+              "id": 7926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7925,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7927,
+                  "src": "2144:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7924,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2144:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2143:6:15"
+            },
+            "scope": 7928,
+            "src": "2082:68:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7929,
+        "src": "384:1769:15"
+      }
+    ],
+    "src": "33:2120:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.8+commit.0bbfe453.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-12T08:08:15.545Z",
+  "devdoc": {
+    "author": "Witnet Foundation",
+    "methods": {
+      "getLastBeacon()": {
+        "returns": {
+          "_0": "last beacon in bytes"
+        }
+      },
+      "getLastEpoch()": {
+        "returns": {
+          "_0": "epoch"
+        }
+      },
+      "getLastHash()": {
+        "returns": {
+          "_0": "blockhash"
+        }
+      },
+      "isUpgradable(address)": {
+        "returns": {
+          "_0": "true if contract is upgradable"
+        }
+      },
+      "verifyDrPoi(uint256[],uint256,uint256,uint256)": {
+        "params": {
+          "_blockHash": "the blockHash",
+          "_element": "the leaf to be verified",
+          "_index": "the index in the merkle tree of the element to verify",
+          "_poi": "the proof of inclusion as [sibling1, sibling2,..]"
+        },
+        "returns": {
+          "_0": "true if valid data request PoI"
+        }
+      },
+      "verifyTallyPoi(uint256[],uint256,uint256,uint256)": {
+        "params": {
+          "_blockHash": "the blockHash",
+          "_element": "the leaf to be verified",
+          "_index": "the index in the merkle tree of the element to verify",
+          "_poi": "the proof of inclusion as [sibling1, sibling2,..]"
+        },
+        "returns": {
+          "_0": "true if valid tally PoI"
+        }
+      }
+    },
+    "title": "Block Relay Interface"
+  },
+  "userdoc": {
+    "methods": {
+      "getLastBeacon()": {
+        "notice": "Returns the beacon from the last inserted block. The last beacon (in bytes) will be used by Witnet Bridge nodes to compute their eligibility."
+      },
+      "getLastEpoch()": {
+        "notice": "Returns the lastest epoch reported to the block relay."
+      },
+      "getLastHash()": {
+        "notice": "Returns the latest hash reported to the block relay"
+      },
+      "isUpgradable(address)": {
+        "notice": "Verifies if the block relay can be upgraded"
+      },
+      "verifyDrPoi(uint256[],uint256,uint256,uint256)": {
+        "notice": "Verifies the validity of a data request PoI against the DR merkle root"
+      },
+      "verifyTallyPoi(uint256[],uint256,uint256,uint256)": {
+        "notice": "Verifies the validity of a tally PoI against the Tally merkle root"
+      }
+    },
+    "notice": "Interface of a Block Relay to a Witnet network It defines how to interact with the Block Relay in order to support: - Retrieve last beacon information - Verify proof of inclusions (PoIs) of data request and tally transactions"
+  }
+}

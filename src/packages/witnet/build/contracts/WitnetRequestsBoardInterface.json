@@ -1,0 +1,1251 @@
+{
+  "contractName": "WitnetRequestsBoardInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "_dr",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tallyReward",
+          "type": "uint256"
+        }
+      ],
+      "name": "postDataRequest",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tallyReward",
+          "type": "uint256"
+        }
+      ],
+      "name": "upgradeDataRequest",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "readDrHash",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "readResult",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "isUpgradable",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.8+commit.0bbfe453\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"isUpgradable\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_dr\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"_tallyReward\",\"type\":\"uint256\"}],\"name\":\"postDataRequest\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"readDrHash\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"readResult\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_tallyReward\",\"type\":\"uint256\"}],\"name\":\"upgradeDataRequest\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Witnet Foundation\",\"methods\":{\"isUpgradable(address)\":{\"returns\":{\"_0\":\"true if contract is upgradable.\"}},\"postDataRequest(bytes,uint256)\":{\"details\":\"Posts a data request into the WRB in expectation that it will be relayed and resolved in Witnet with a total reward that equals to msg.value.\",\"params\":{\"_dr\":\"The bytes corresponding to the Protocol Buffers serialization of the data request output.\",\"_tallyReward\":\"The amount of value that will be detracted from the transaction value and reserved for rewarding the reporting of the final result (aka tally) of the data request.\"},\"returns\":{\"_0\":\"The unique identifier of the data request.\"}},\"readDrHash(uint256)\":{\"details\":\"Retrieves the DR hash of the id from the WRB.\",\"params\":{\"_id\":\"The unique identifier of the data request.\"},\"returns\":{\"_0\":\"The hash of the DR\"}},\"readResult(uint256)\":{\"details\":\"Retrieves the result (if already available) of one data request from the WRB.\",\"params\":{\"_id\":\"The unique identifier of the data request.\"},\"returns\":{\"_0\":\"The result of the DR\"}},\"upgradeDataRequest(uint256,uint256)\":{\"details\":\"Increments the rewards of a data request by adding more value to it. The new request reward will be increased by msg.value minus the difference between the former tally reward and the new tally reward.\",\"params\":{\"_id\":\"The unique identifier of the data request.\",\"_tallyReward\":\"The new tally reward. Needs to be equal or greater than the former tally reward.\"}}},\"title\":\"Witnet Requests Board Interface\"},\"userdoc\":{\"methods\":{\"isUpgradable(address)\":{\"notice\":\"Verifies if the block relay can be upgraded.\"}},\"notice\":\"Interface of a Witnet Request Board (WRB) It defines how to interact with the WRB in order to support: - Post and upgrade a data request - Read the result of a dr\"}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardInterface.sol\":\"WitnetRequestsBoardInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardInterface.sol\":{\"keccak256\":\"0xa8682a060cbad4778d52d909ae8a6977caf2b355869822dfb065a2f4bb79e84e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4019e24c2f586ed1ca0e1595d7481377724428e7340c096e282e5dff87381b8d\",\"dweb:/ipfs/QmVUSdwPqBZYnXRCZdSmBqoP8eXXkNL46CJDDphSD8qwTK\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.0 <0.7.0;\n\n\n/**\n * @title Witnet Requests Board Interface\n * @notice Interface of a Witnet Request Board (WRB)\n * It defines how to interact with the WRB in order to support:\n *  - Post and upgrade a data request\n *  - Read the result of a dr\n * @author Witnet Foundation\n */\ninterface WitnetRequestsBoardInterface {\n\n  /// @dev Posts a data request into the WRB in expectation that it will be relayed and resolved in Witnet with a total reward that equals to msg.value.\n  /// @param _dr The bytes corresponding to the Protocol Buffers serialization of the data request output.\n  /// @param _tallyReward The amount of value that will be detracted from the transaction value and reserved for rewarding the reporting of the final result (aka tally) of the data request.\n  /// @return The unique identifier of the data request.\n  function postDataRequest(bytes calldata _dr, uint256 _tallyReward) external payable returns(uint256);\n\n  /// @dev Increments the rewards of a data request by adding more value to it. The new request reward will be increased by msg.value minus the difference between the former tally reward and the new tally reward.\n  /// @param _id The unique identifier of the data request.\n  /// @param _tallyReward The new tally reward. Needs to be equal or greater than the former tally reward.\n  function upgradeDataRequest(uint256 _id, uint256 _tallyReward) external payable;\n\n  /// @dev Retrieves the DR hash of the id from the WRB.\n  /// @param _id The unique identifier of the data request.\n  /// @return The hash of the DR\n  function readDrHash (uint256 _id) external view returns(uint256);\n\n\n  /// @dev Retrieves the result (if already available) of one data request from the WRB.\n  /// @param _id The unique identifier of the data request.\n  /// @return The result of the DR\n  function readResult (uint256 _id) external view returns(bytes memory);\n\n  /// @notice Verifies if the block relay can be upgraded.\n  /// @return true if contract is upgradable.\n  function isUpgradable(address _address) external view returns(bool);\n\n}\n",
+  "sourcePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardInterface.sol",
+    "exportedSymbols": {
+      "WitnetRequestsBoardInterface": [
+        4607
+      ]
+    },
+    "id": 4608,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4563,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 4564,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:263:8",
+          "text": "@title Witnet Requests Board Interface\n@notice Interface of a Witnet Request Board (WRB)\nIt defines how to interact with the WRB in order to support:\n - Post and upgrade a data request\n - Read the result of a dr\n@author Witnet Foundation"
+        },
+        "fullyImplemented": false,
+        "id": 4607,
+        "linearizedBaseContracts": [
+          4607
+        ],
+        "name": "WitnetRequestsBoardInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 4565,
+              "nodeType": "StructuredDocumentation",
+              "src": "375:504:8",
+              "text": "@dev Posts a data request into the WRB in expectation that it will be relayed and resolved in Witnet with a total reward that equals to msg.value.\n @param _dr The bytes corresponding to the Protocol Buffers serialization of the data request output.\n @param _tallyReward The amount of value that will be detracted from the transaction value and reserved for rewarding the reporting of the final result (aka tally) of the data request.\n @return The unique identifier of the data request."
+            },
+            "functionSelector": "ec32e3db",
+            "id": 4574,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "postDataRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4567,
+                  "mutability": "mutable",
+                  "name": "_dr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4574,
+                  "src": "907:18:8",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4566,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "907:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4569,
+                  "mutability": "mutable",
+                  "name": "_tallyReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4574,
+                  "src": "927:20:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4568,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "927:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "906:42:8"
+            },
+            "returnParameters": {
+              "id": 4573,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4572,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4574,
+                  "src": "974:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4571,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "974:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "973:9:8"
+            },
+            "scope": 4607,
+            "src": "882:101:8",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4575,
+              "nodeType": "StructuredDocumentation",
+              "src": "987:377:8",
+              "text": "@dev Increments the rewards of a data request by adding more value to it. The new request reward will be increased by msg.value minus the difference between the former tally reward and the new tally reward.\n @param _id The unique identifier of the data request.\n @param _tallyReward The new tally reward. Needs to be equal or greater than the former tally reward."
+            },
+            "functionSelector": "48ab5b65",
+            "id": 4582,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeDataRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4580,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4577,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4582,
+                  "src": "1395:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1395:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4579,
+                  "mutability": "mutable",
+                  "name": "_tallyReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4582,
+                  "src": "1408:20:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4578,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1408:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1394:35:8"
+            },
+            "returnParameters": {
+              "id": 4581,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1446:0:8"
+            },
+            "scope": 4607,
+            "src": "1367:80:8",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4583,
+              "nodeType": "StructuredDocumentation",
+              "src": "1451:147:8",
+              "text": "@dev Retrieves the DR hash of the id from the WRB.\n @param _id The unique identifier of the data request.\n @return The hash of the DR"
+            },
+            "functionSelector": "08ba7342",
+            "id": 4590,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "readDrHash",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4586,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4585,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4590,
+                  "src": "1622:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4584,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1622:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1621:13:8"
+            },
+            "returnParameters": {
+              "id": 4589,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4588,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4590,
+                  "src": "1657:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4587,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1657:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1656:9:8"
+            },
+            "scope": 4607,
+            "src": "1601:65:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4591,
+              "nodeType": "StructuredDocumentation",
+              "src": "1671:181:8",
+              "text": "@dev Retrieves the result (if already available) of one data request from the WRB.\n @param _id The unique identifier of the data request.\n @return The result of the DR"
+            },
+            "functionSelector": "45b3d782",
+            "id": 4598,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "readResult",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4593,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4598,
+                  "src": "1876:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4592,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1876:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1875:13:8"
+            },
+            "returnParameters": {
+              "id": 4597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4596,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4598,
+                  "src": "1911:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4595,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1911:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1910:14:8"
+            },
+            "scope": 4607,
+            "src": "1855:70:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4599,
+              "nodeType": "StructuredDocumentation",
+              "src": "1929:102:8",
+              "text": "@notice Verifies if the block relay can be upgraded.\n @return true if contract is upgradable."
+            },
+            "functionSelector": "be2adb35",
+            "id": 4606,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isUpgradable",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4602,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4601,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4606,
+                  "src": "2056:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4600,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2056:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2055:18:8"
+            },
+            "returnParameters": {
+              "id": 4605,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4604,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4606,
+                  "src": "2096:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4603,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2096:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2095:6:8"
+            },
+            "scope": 4607,
+            "src": "2034:68:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4608,
+        "src": "331:1774:8"
+      }
+    ],
+    "src": "33:2073:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/WitnetRequestsBoardInterface.sol",
+    "exportedSymbols": {
+      "WitnetRequestsBoardInterface": [
+        4607
+      ]
+    },
+    "id": 4608,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4563,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 4564,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:263:8",
+          "text": "@title Witnet Requests Board Interface\n@notice Interface of a Witnet Request Board (WRB)\nIt defines how to interact with the WRB in order to support:\n - Post and upgrade a data request\n - Read the result of a dr\n@author Witnet Foundation"
+        },
+        "fullyImplemented": false,
+        "id": 4607,
+        "linearizedBaseContracts": [
+          4607
+        ],
+        "name": "WitnetRequestsBoardInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 4565,
+              "nodeType": "StructuredDocumentation",
+              "src": "375:504:8",
+              "text": "@dev Posts a data request into the WRB in expectation that it will be relayed and resolved in Witnet with a total reward that equals to msg.value.\n @param _dr The bytes corresponding to the Protocol Buffers serialization of the data request output.\n @param _tallyReward The amount of value that will be detracted from the transaction value and reserved for rewarding the reporting of the final result (aka tally) of the data request.\n @return The unique identifier of the data request."
+            },
+            "functionSelector": "ec32e3db",
+            "id": 4574,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "postDataRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4567,
+                  "mutability": "mutable",
+                  "name": "_dr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4574,
+                  "src": "907:18:8",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4566,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "907:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4569,
+                  "mutability": "mutable",
+                  "name": "_tallyReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4574,
+                  "src": "927:20:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4568,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "927:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "906:42:8"
+            },
+            "returnParameters": {
+              "id": 4573,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4572,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4574,
+                  "src": "974:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4571,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "974:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "973:9:8"
+            },
+            "scope": 4607,
+            "src": "882:101:8",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4575,
+              "nodeType": "StructuredDocumentation",
+              "src": "987:377:8",
+              "text": "@dev Increments the rewards of a data request by adding more value to it. The new request reward will be increased by msg.value minus the difference between the former tally reward and the new tally reward.\n @param _id The unique identifier of the data request.\n @param _tallyReward The new tally reward. Needs to be equal or greater than the former tally reward."
+            },
+            "functionSelector": "48ab5b65",
+            "id": 4582,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeDataRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4580,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4577,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4582,
+                  "src": "1395:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1395:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4579,
+                  "mutability": "mutable",
+                  "name": "_tallyReward",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4582,
+                  "src": "1408:20:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4578,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1408:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1394:35:8"
+            },
+            "returnParameters": {
+              "id": 4581,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1446:0:8"
+            },
+            "scope": 4607,
+            "src": "1367:80:8",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4583,
+              "nodeType": "StructuredDocumentation",
+              "src": "1451:147:8",
+              "text": "@dev Retrieves the DR hash of the id from the WRB.\n @param _id The unique identifier of the data request.\n @return The hash of the DR"
+            },
+            "functionSelector": "08ba7342",
+            "id": 4590,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "readDrHash",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4586,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4585,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4590,
+                  "src": "1622:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4584,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1622:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1621:13:8"
+            },
+            "returnParameters": {
+              "id": 4589,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4588,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4590,
+                  "src": "1657:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4587,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1657:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1656:9:8"
+            },
+            "scope": 4607,
+            "src": "1601:65:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4591,
+              "nodeType": "StructuredDocumentation",
+              "src": "1671:181:8",
+              "text": "@dev Retrieves the result (if already available) of one data request from the WRB.\n @param _id The unique identifier of the data request.\n @return The result of the DR"
+            },
+            "functionSelector": "45b3d782",
+            "id": 4598,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "readResult",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4593,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4598,
+                  "src": "1876:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4592,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1876:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1875:13:8"
+            },
+            "returnParameters": {
+              "id": 4597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4596,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4598,
+                  "src": "1911:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4595,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1911:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1910:14:8"
+            },
+            "scope": 4607,
+            "src": "1855:70:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 4599,
+              "nodeType": "StructuredDocumentation",
+              "src": "1929:102:8",
+              "text": "@notice Verifies if the block relay can be upgraded.\n @return true if contract is upgradable."
+            },
+            "functionSelector": "be2adb35",
+            "id": 4606,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isUpgradable",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4602,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4601,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4606,
+                  "src": "2056:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4600,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2056:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2055:18:8"
+            },
+            "returnParameters": {
+              "id": 4605,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4604,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 4606,
+                  "src": "2096:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4603,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2096:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2095:6:8"
+            },
+            "scope": 4607,
+            "src": "2034:68:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4608,
+        "src": "331:1774:8"
+      }
+    ],
+    "src": "33:2073:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.8+commit.0bbfe453.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-12T08:08:15.516Z",
+  "devdoc": {
+    "author": "Witnet Foundation",
+    "methods": {
+      "isUpgradable(address)": {
+        "returns": {
+          "_0": "true if contract is upgradable."
+        }
+      },
+      "postDataRequest(bytes,uint256)": {
+        "details": "Posts a data request into the WRB in expectation that it will be relayed and resolved in Witnet with a total reward that equals to msg.value.",
+        "params": {
+          "_dr": "The bytes corresponding to the Protocol Buffers serialization of the data request output.",
+          "_tallyReward": "The amount of value that will be detracted from the transaction value and reserved for rewarding the reporting of the final result (aka tally) of the data request."
+        },
+        "returns": {
+          "_0": "The unique identifier of the data request."
+        }
+      },
+      "readDrHash(uint256)": {
+        "details": "Retrieves the DR hash of the id from the WRB.",
+        "params": {
+          "_id": "The unique identifier of the data request."
+        },
+        "returns": {
+          "_0": "The hash of the DR"
+        }
+      },
+      "readResult(uint256)": {
+        "details": "Retrieves the result (if already available) of one data request from the WRB.",
+        "params": {
+          "_id": "The unique identifier of the data request."
+        },
+        "returns": {
+          "_0": "The result of the DR"
+        }
+      },
+      "upgradeDataRequest(uint256,uint256)": {
+        "details": "Increments the rewards of a data request by adding more value to it. The new request reward will be increased by msg.value minus the difference between the former tally reward and the new tally reward.",
+        "params": {
+          "_id": "The unique identifier of the data request.",
+          "_tallyReward": "The new tally reward. Needs to be equal or greater than the former tally reward."
+        }
+      }
+    },
+    "title": "Witnet Requests Board Interface"
+  },
+  "userdoc": {
+    "methods": {
+      "isUpgradable(address)": {
+        "notice": "Verifies if the block relay can be upgraded."
+      }
+    },
+    "notice": "Interface of a Witnet Request Board (WRB) It defines how to interact with the WRB in order to support: - Post and upgrade a data request - Read the result of a dr"
+  }
+}

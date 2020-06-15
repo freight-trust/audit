@@ -1,0 +1,54 @@
+{
+  "name": "witnet-ethereum-bridge",
+  "version": "0.1.1",
+  "description": "Witnet-Ethereum Bridge Interface",
+  "main": "",
+  "scripts": {
+    "test": "truffle test",
+    "console": "truffle console",
+    "postinstall": "npm run compile-contracts",
+    "compile-contracts": "truffle compile --all",
+    "compile-flattened": "npx truffle compile --all --config flattened-config.js ",
+    "flatten": " mkdir contracts/flattened/ 2>/dev/null; npx truffle-flattener contracts/*.sol > contracts/flattened/Flattened.sol",
+    "fmt": "solhint --max-warnings 0 \"contracts/**/*.sol\" && eslint ./test && solhint \"test/**/*.sol\"",
+    "fmt!": "solhint --max-warnings 0 \"contracts/**/*.sol\" --fix && eslint ./test --fix && solhint \"test/**/*.sol\" --fix",
+    "migrate-flattened": "npm run flatten && npx truffle migrate --config flattened-config.js",
+    "coverage": "solidity-coverage",
+    "verify-flattened": "npx truffle run verify"
+  },
+  "author": "Witnet Foundation <info@witnet.foundation>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/witnet/witnet-ethereum-bridge.git"
+  },
+  "keywords": [
+    "bridge",
+    "witnet",
+    "ethereum"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "3.0.1",
+    "vrf-solidity": "0.2.2",
+    "witnet-ethereum-block-relay": "witnet/witnet-ethereum-block-relay"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "solhint": "^3.0.0",
+    "ganache-cli": "^6.9.1",
+    "js-sha256": "^0.9.0",
+    "solidity-coverage": "^0.7.2",
+    "truffle": "^5.1.26",
+    "truffle-assertions": "^0.9.2",
+    "truffle-flattener": "git+https://github.com/witnet/truffle-flattener.git#single-experimental",
+    "truffle-hdwallet-provider": "^1.0.13",
+    "truffle-plugin-verify": "^0.3.9",
+    "truffle-verify": "^1.0.8"
+  }
+}

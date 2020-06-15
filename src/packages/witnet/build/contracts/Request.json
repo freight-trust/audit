@@ -1,0 +1,779 @@
+{
+  "contractName": "Request",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "_bytecode",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "bytecode",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "id",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.8+commit.0bbfe453\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_bytecode\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"bytecode\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"id\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"details\":\"A `Request` is constructed around a `bytes memory` value containing a well-formed Witnet data request serialized using Protocol Buffers. However, we cannot verify its validity at this point. This implies that contracts using the WRB should not be considered trustless before a valid Proof-of-Inclusion has been posted for the requests. The hash of the request is computed in the constructor to guarantee consistency. Otherwise there could be a mismatch and a data request could be resolved with the result of another.\",\"params\":{\"_bytecode\":\"Witnet request in bytes.\"}}},\"title\":\"The serialized form of a Witnet data request\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol\":\"Request\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol\":{\"keccak256\":\"0x24f1b1cb5938b963da70568d448826bd466e1952f94ebdbe9231c1ebd303faf7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://47852a80fcc70c9f3e943771e9caf7bcb8a91476150661c4a5d9a73cc97d1e2e\",\"dweb:/ipfs/QmPAF49HeGSK2cvKpRcjRACe9Dwz83tdZtqj82DzJDSF85\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516103ce3803806103ce8339818101604052602081101561003357600080fd5b810190808051604051939291908464010000000082111561005357600080fd5b90830190602082018581111561006857600080fd5b825164010000000081118282018810171561008257600080fd5b82525081516020918201929091019080838360005b838110156100af578181015183820152602001610097565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b50604052505081516100f691506000906020840190610188565b506002816040518082805190602001908083835b602083106101295780518252601f19909201916020918201910161010a565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610168573d6000803e3d6000fd5b5050506040513d602081101561017d57600080fd5b505160015550610223565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101c957805160ff19168380011785556101f6565b828001600101855582156101f6579182015b828111156101f65782518255916020019190600101906101db565b50610202929150610206565b5090565b61022091905b80821115610202576000815560010161020c565b90565b61019c806102326000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063af640d0f1461003b578063f094000214610055575b600080fd5b6100436100d2565b60408051918252519081900360200190f35b61005d6100d8565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561009757818101518382015260200161007f565b50505050905090810190601f1680156100c45780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60015481565b6000805460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152929183018282801561015e5780601f106101335761010080835404028352916020019161015e565b820191906000526020600020905b81548152906001019060200180831161014157829003601f168201915b50505050508156fea264697066735822122098eac82bbdc231682f182dd0a2f1d3b1ef50a84fb0254ca9ae9b91b39508571a64736f6c63430006080033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063af640d0f1461003b578063f094000214610055575b600080fd5b6100436100d2565b60408051918252519081900360200190f35b61005d6100d8565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561009757818101518382015260200161007f565b50505050905090810190601f1680156100c45780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60015481565b6000805460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152929183018282801561015e5780601f106101335761010080835404028352916020019161015e565b820191906000526020600020905b81548152906001019060200180831161014157829003601f168201915b50505050508156fea264697066735822122098eac82bbdc231682f182dd0a2f1d3b1ef50a84fb0254ca9ae9b91b39508571a64736f6c63430006080033",
+  "immutableReferences": {},
+  "sourceMap": "130:780:4:-:0;;;797:111;5:9:-1;2:2;;;27:1;24;17:12;2:2;797:111:4;;;;;;;;;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;797:111:4;;;;;;;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;62:21;;;;123:4;114:14;;138:31;;;135:2;;;182:1;179;172:12;135:2;213:10;;261:11;244:29;;285:43;;;282:58;-1:-1;233:115;230:2;;;361:1;358;351:12;230:2;372:25;;-1:-1;797:111:4;;420:4:-1;411:14;;;;797:111:4;;;;;411:14:-1;797:111:4;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;797:111:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;797:111:4;;-1:-1:-1;;846:20:4;;;;-1:-1:-1;846:8:4;;:20;;;;;:::i;:::-;;885:17;892:9;885:17;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;299:10;344;;263:2;259:12;;;254:3;250:22;-1:-1;;246:30;311:9;;295:26;;;340:21;;377:20;365:33;;885:17:4;;;;;;;-1:-1:-1;263:2;;-1:-1;;885:17:4;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;885:17:4;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;885:17:4;872:2;:31;-1:-1:-1;130:780:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;130:780:4;;;-1:-1:-1;130:780:4;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "130:780:4:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;130:780:4;;;;;;;;;;;;;;;;;;;;;12:1:-1;9;2:12;176:17:4;;;:::i;:::-;;;;;;;;;;;;;;;;151:21;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;151:21:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;176:17;;;;:::o;151:21::-;;;;;;;;;;;;;;;-1:-1:-1;;151:21:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.0 <0.7.0;\n\n\n/**\n * @title The serialized form of a Witnet data request\n */\ncontract Request {\n  bytes public bytecode;\n  uint256 public id;\n\n /**\n  * @dev A `Request` is constructed around a `bytes memory` value containing a well-formed Witnet data request serialized\n  * using Protocol Buffers. However, we cannot verify its validity at this point. This implies that contracts using\n  * the WRB should not be considered trustless before a valid Proof-of-Inclusion has been posted for the requests.\n  * The hash of the request is computed in the constructor to guarantee consistency. Otherwise there could be a\n  * mismatch and a data request could be resolved with the result of another.\n  * @param _bytecode Witnet request in bytes.\n  */\n  constructor(bytes memory _bytecode) public {\n    bytecode = _bytecode;\n    id = uint256(sha256(_bytecode));\n  }\n}\n",
+  "sourcePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol",
+  "ast": {
+    "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol",
+    "exportedSymbols": {
+      "Request": [
+        2117
+      ]
+    },
+    "id": 2118,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2091,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2092,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:62:4",
+          "text": "@title The serialized form of a Witnet data request"
+        },
+        "fullyImplemented": true,
+        "id": 2117,
+        "linearizedBaseContracts": [
+          2117
+        ],
+        "name": "Request",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "f0940002",
+            "id": 2094,
+            "mutability": "mutable",
+            "name": "bytecode",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2117,
+            "src": "151:21:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_storage",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 2093,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "af640d0f",
+            "id": 2096,
+            "mutability": "mutable",
+            "name": "id",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2117,
+            "src": "176:17:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2095,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "176:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2115,
+              "nodeType": "Block",
+              "src": "840:68:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2102,
+                      "name": "bytecode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2094,
+                      "src": "846:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_storage",
+                        "typeString": "bytes storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2103,
+                      "name": "_bytecode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2099,
+                      "src": "857:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "src": "846:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage",
+                      "typeString": "bytes storage ref"
+                    }
+                  },
+                  "id": 2105,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:20:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2113,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2106,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2096,
+                      "src": "872:2:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 2110,
+                              "name": "_bytecode",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2099,
+                              "src": "892:9:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 2109,
+                            "name": "sha256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -22,
+                            "src": "885:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_sha256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 2111,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "885:17:4",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 2108,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "877:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 2107,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "877:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 2112,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "877:26:4",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "872:31:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2114,
+                  "nodeType": "ExpressionStatement",
+                  "src": "872:31:4"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2097,
+              "nodeType": "StructuredDocumentation",
+              "src": "197:597:4",
+              "text": "@dev A `Request` is constructed around a `bytes memory` value containing a well-formed Witnet data request serialized\nusing Protocol Buffers. However, we cannot verify its validity at this point. This implies that contracts using\nthe WRB should not be considered trustless before a valid Proof-of-Inclusion has been posted for the requests.\nThe hash of the request is computed in the constructor to guarantee consistency. Otherwise there could be a\nmismatch and a data request could be resolved with the result of another.\n@param _bytecode Witnet request in bytes."
+            },
+            "id": 2116,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2099,
+                  "mutability": "mutable",
+                  "name": "_bytecode",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2116,
+                  "src": "809:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2098,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "809:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "808:24:4"
+            },
+            "returnParameters": {
+              "id": 2101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "840:0:4"
+            },
+            "scope": 2117,
+            "src": "797:111:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2118,
+        "src": "130:780:4"
+      }
+    ],
+    "src": "33:878:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/sbacha/witnet-ethereum-bridge/contracts/Request.sol",
+    "exportedSymbols": {
+      "Request": [
+        2117
+      ]
+    },
+    "id": 2118,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2091,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2092,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:62:4",
+          "text": "@title The serialized form of a Witnet data request"
+        },
+        "fullyImplemented": true,
+        "id": 2117,
+        "linearizedBaseContracts": [
+          2117
+        ],
+        "name": "Request",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "f0940002",
+            "id": 2094,
+            "mutability": "mutable",
+            "name": "bytecode",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2117,
+            "src": "151:21:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_storage",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 2093,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "af640d0f",
+            "id": 2096,
+            "mutability": "mutable",
+            "name": "id",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2117,
+            "src": "176:17:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2095,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "176:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2115,
+              "nodeType": "Block",
+              "src": "840:68:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2102,
+                      "name": "bytecode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2094,
+                      "src": "846:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_storage",
+                        "typeString": "bytes storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2103,
+                      "name": "_bytecode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2099,
+                      "src": "857:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "src": "846:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage",
+                      "typeString": "bytes storage ref"
+                    }
+                  },
+                  "id": 2105,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:20:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2113,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2106,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2096,
+                      "src": "872:2:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 2110,
+                              "name": "_bytecode",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2099,
+                              "src": "892:9:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 2109,
+                            "name": "sha256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -22,
+                            "src": "885:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_sha256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 2111,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "885:17:4",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 2108,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "877:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 2107,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "877:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 2112,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "877:26:4",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "872:31:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2114,
+                  "nodeType": "ExpressionStatement",
+                  "src": "872:31:4"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2097,
+              "nodeType": "StructuredDocumentation",
+              "src": "197:597:4",
+              "text": "@dev A `Request` is constructed around a `bytes memory` value containing a well-formed Witnet data request serialized\nusing Protocol Buffers. However, we cannot verify its validity at this point. This implies that contracts using\nthe WRB should not be considered trustless before a valid Proof-of-Inclusion has been posted for the requests.\nThe hash of the request is computed in the constructor to guarantee consistency. Otherwise there could be a\nmismatch and a data request could be resolved with the result of another.\n@param _bytecode Witnet request in bytes."
+            },
+            "id": 2116,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2099,
+                  "mutability": "mutable",
+                  "name": "_bytecode",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2116,
+                  "src": "809:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2098,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "809:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "808:24:4"
+            },
+            "returnParameters": {
+              "id": 2101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "840:0:4"
+            },
+            "scope": 2117,
+            "src": "797:111:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2118,
+        "src": "130:780:4"
+      }
+    ],
+    "src": "33:878:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.8+commit.0bbfe453.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-12T08:08:15.480Z",
+  "devdoc": {
+    "methods": {
+      "constructor": {
+        "details": "A `Request` is constructed around a `bytes memory` value containing a well-formed Witnet data request serialized using Protocol Buffers. However, we cannot verify its validity at this point. This implies that contracts using the WRB should not be considered trustless before a valid Proof-of-Inclusion has been posted for the requests. The hash of the request is computed in the constructor to guarantee consistency. Otherwise there could be a mismatch and a data request could be resolved with the result of another.",
+        "params": {
+          "_bytecode": "Witnet request in bytes."
+        }
+      }
+    },
+    "title": "The serialized form of a Witnet data request"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

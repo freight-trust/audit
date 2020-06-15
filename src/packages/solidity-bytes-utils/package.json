@@ -1,0 +1,24 @@
+{
+  "name": "solidity-bytes-utils",
+  "version": "1.0.0",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@ensdomains/buffer": "github:JonahGroendal/buffer"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonahGroendal/solidity-bytes-utils.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/JonahGroendal/dnssec-oracle/issues"
+  },
+  "homepage": "https://github.com/JonahGroendal/dnssec-oracle#readme"
+}

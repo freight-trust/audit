@@ -1,0 +1,12 @@
+{
+  "name": "bespokePool",
+  "version": "1.0.1",
+  "description": "a generalized staking pool for ERC-20 token's",
+  "main": "index.js",
+  "repository": "https://github.com/freight-chain/bespokepool.git",
+  "author": "Freight Trust <4074885-freighttrust@users.noreply.gitlab.com>",
+  "license": "APACHE-2",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.0.1"
+  }
+}
